@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Website-Ku</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        
+        body { display: flex; min-height: 100vh; background-color: #f4f7fe; }
+
+        /* --- SIDEBAR STATIS (KIRI) --- */
+        .sidebar {
+            width: 260px;
+            background-color: #2D3250;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            height: 100vh;
+        }
+
+        .sidebar-header {
+            background-color: #2D3250;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .sidebar-header h2 {
+            font-size: 18px;
+            margin: 0;
+            color: white;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 30px;
+            display: inline-block;
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        .sidebar-menu {
+            flex: 1;
+            padding: 20px 0;
+            list-style: none;
+        }
+
+        .sidebar-menu li a {
+            display: flex;
+            align-items: center;
+            padding: 15px 25px;
+            color: #d1d5db;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 15px;
+        }
+
+        .sidebar-menu li a i {
+            margin-right: 15px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .sidebar-menu li a:hover {
+            background-color: #3e4464;
+            color: white;
+            padding-left: 35px;
+        }
+
+        /* --- KONTEN UTAMA (KANAN) --- */
+        .main-content {
+            flex: 1;
+            margin-left: 260px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top-header {
+            background-color: white;
+            height: 70px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .btn-logout {
+            background-color: #f87171;
+            color: white;
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .btn-logout:hover { background-color: #ef4444; }
+
+        /* Welcome Section */
+        .welcome-section {
+            flex: 1;
+            padding: 60px;
+            text-align: center;
+        }
+
+        .welcome-box {
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            display: inline-block;
+        }
+
+        .welcome-text { font-size: 28px; color: #1f2937; }
+        .user-highlight { color: #3b82f6; font-weight: bold; }
+
+        /* Footer */
+        footer {
+            padding: 20px;
+            text-align: center;
+            background-color: white;
+            color: #6b7280;
+            font-size: 13px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        /* Responsive untuk Tablet/HP */
+        @media (max-width: 768px) {
+            .sidebar { width: 70px; }
+            .sidebar h2, .sidebar span { display: none; }
+            .main-content { margin-left: 70px; }
+            .sidebar-menu li a { justify-content: center; padding: 20px; }
+            .sidebar-menu li a i { margin-right: 0; font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo"><h2>WEBSITE-KU</h2></div>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="test-web/tentang.html"><i class="fas fa-user"></i> <span>Tentang Saya</span></a></li>
+            <li><a href="test-web/kontak.html"><i class="fas fa-envelope"></i> <span>Kontak Saya</span></a></li>
+            <li><a href="test-web/pendidikan.html"><i class="fas fa-graduation-cap"></i> <span>Pendidikan</span></a></li>
+            <li><a href="test-web/skill.html"><i class="fas fa-code"></i> <span>Skill</span></a></li>
+            <li><a href="test-web/layout.html"><i class="fas fa-th-large"></i> <span>Layout</span></a></li>
+            <li><a href="test-web/form.html"><i class="fa-brands fa-wpforms"></i> <span>Form</span></a></li>
+            <li><a href="test-web/kalkulator.html"><i class="fas fa-calculator"></i> <span>Kalkulator</span></a></li>
+        </ul>
+    </aside>
+
+    <div class="main-content">
+        <header class="top-header">
+            <a href="test-signin.html" class="btn-logout">LOGOUT</a>
+        </header>
+
+        <main class="welcome-section">
+            <div class="welcome-box">
+                <h1 class="welcome-text">
+                    Selamat Datang di Dashboard <br>
+                    <span class="user-highlight">User</span>
+                </h1>
+            </div>
+        </main>
+
+        <footer>
+            Copyright © 2026 Gedesky. All Rights Reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
