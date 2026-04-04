@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website-Ku</title>
+    <link rel="stylesheet" href="../assets-html/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Website-Ku</div>
+        <ul class="nav-links">
+            <li><a href="../dashboard.php">Dashboard</a></li>
+            <li><a href="tentang.html">Tentang Saya</a></li>
+            <li><a href="kontak.html">Kontak Saya</a></li>
+            <li><a href="pendidikan.html">Pendidikan</a></li>
+            <li><a href="skill.html">Skill</a></li>
+            <li><a href="layout.html">Layout</a></li>
+            <li><a href="form.html" class="active-button">Form</a></li>
+            <li><a href="kalkulator.html">Kalkulator</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="profile-card">
+            <div class="form-header">
+                <h2>FORM PENDAFTARAN</h2>
+            </div>
+
+            <div class="content-white">
+
+                <form action="#" id="pendaftaranForm" class="registration-form">
+                    <div class="form-group">
+                        <label>Nama</label>
+                        <input type="text" placeholder="Contoh: I Gede Permana" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>NIM</label>
+                        <input type="text" placeholder="Contoh: 2413232000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Jurusan</label>
+                        <input type="text" placeholder="Contoh: Informatika" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Jenis Kelamin</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="gender" value="L"> Laki-laki</label>
+                            <label><input type="radio" name="gender" value="P"> Perempuan</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Semester</label>
+                        <select required>
+                            <option value="" disabled selected>Semester Mahasiswa</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Hobi</label>
+                        <input type="text" placeholder="Contoh: Main Game, Olah Raga, Membaca, dan lain sebagainya...">
+                    </div>
+
+                    <div class="button-group">
+                        <button type="submit" class="btn-kirim">Kirim</button>
+                        <button type="reset" class="btn-reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        Copyright by Gedesky Pte. Ltd. All Rights Reserved.
+    </footer>
+    <script src="../assets-html/js/script.js"></script>
+</body>
+</html>

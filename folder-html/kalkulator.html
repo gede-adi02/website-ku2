@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website-Ku</title>
+    <link rel="stylesheet" href="../assets-html/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Website-Ku</div>
+        <ul class="nav-links">
+            <li><a href="../dashboard.php">Dashboard</a></li>
+            <li><a href="tentang.html">Tentang Saya</a></li>
+            <li><a href="kontak.html">Kontak Saya</a></li>
+            <li><a href="pendidikan.html">Pendidikan</a></li>
+            <li><a href="skill.html">Skill</a></li>
+            <li><a href="layout.html">Layout</a></li>
+            <li><a href="form.html">Form</a></li>
+            <li><a href="kalkulator.html" class="active-button">Kalkulator</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="profile-card calculator-card">
+            <div class="form-header">
+                <h2>Kalkulator Sederhana</h2>
+            </div>
+
+            <div class="content-white">
+                <p style="text-align: center; font-weight: normal; color: #666; margin-bottom: 20px;">
+                    Bisa dipakai dengan cara di klik tombolnya atau menggunakan keyboard
+                </p>
+
+            <div class="calc-display">
+                <span id="display-screen">0</span>
+            </div>
+
+            <div class="calc-grid">
+                <button class="btn-calc btn-gold" onclick="clearDisplay()">C</button>
+                <button class="btn-calc btn-gold" onclick="deleteLast()"><i class="fa-solid fa-backspace"></i></button>
+                <button class="btn-calc btn-blue" onclick="appendToDisplay('(')">(</button>
+                <button class="btn-calc btn-blue" onclick="appendToDisplay(')')">)</button>
+
+                <button class="btn-calc" onclick="appendToDisplay('7')">7</button>
+                <button class="btn-calc" onclick="appendToDisplay('8')">8</button>
+                <button class="btn-calc" onclick="appendToDisplay('9')">9</button>
+                <button class="btn-calc btn-blue" onclick="appendToDisplay('/')">÷</button>
+
+                <button class="btn-calc" onclick="appendToDisplay('4')">4</button>
+                <button class="btn-calc" onclick="appendToDisplay('5')">5</button>
+                <button class="btn-calc" onclick="appendToDisplay('6')">6</button>
+                <button class="btn-calc btn-blue" onclick="appendToDisplay('*')">×</button>
+
+                <button class="btn-calc" onclick="appendToDisplay('1')">1</button>
+                <button class="btn-calc" onclick="appendToDisplay('2')">2</button>
+                <button class="btn-calc" onclick="appendToDisplay('3')">3</button>
+                <button class="btn-calc btn-blue" onclick="appendToDisplay('-')">−</button>
+
+                <button class="btn-calc btn-zero" onclick="appendToDisplay('0')">0</button>
+                <button class="btn-calc" onclick="appendToDisplay('.')">.</button>
+                <button class="btn-calc btn-blue" onclick="appendToDisplay('+')">+</button>
+
+                <button class="btn-calc btn-equal" onclick="calculateResult()">=</button>
+            </div>
+
+            <script src="../assets-html/js/kalkulator.js"></script>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        Copyright by Gedesky Pte. Ltd. All Rights Reserved.
+    </footer>
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
